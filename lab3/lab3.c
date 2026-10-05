@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <locale.h> 
 
-//лаб3
+//Р»Р°Р±3
 
 int main()
 {
@@ -16,9 +16,9 @@ int main()
 int zadanie1()
 {
     int num;
-    printf("1) введите число: ");
+    printf("1) РІРІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
     scanf("%d", &num);
-    printf("Выведено число %d\n", num);
+    printf("Р’С‹РІРµРґРµРЅРѕ С‡РёСЃР»Рѕ %d\n", num);
     return 0;
 }
 
@@ -26,19 +26,19 @@ int zadanie2()
 {
     int dym;
     float result;
-    printf("2) введите число: ");
+    printf("2) РІРІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
     scanf("%d", &dym);
     result = D * dym;
-    printf("%d дюймов – это %.1f см\n", dym, result);
+    printf("%d РґСЋР№РјРѕРІ вЂ“ СЌС‚Рѕ %.1f СЃРј\n", dym, result);
     return 0;
 }
 
 int zadanie3()
 {
     double a, b, res1, res2, res3;
-    printf("3.1) введите число а: ");
+    printf("3.1) РІРІРµРґРёС‚Рµ С‡РёСЃР»Рѕ Р°: ");
     scanf("%lf", &a);
-    printf("3.2) введите число b: ");
+    printf("3.2) РІРІРµРґРёС‚Рµ С‡РёСЃР»Рѕ b: ");
     scanf("%lf", &b);
 
     puts("----------------------");
