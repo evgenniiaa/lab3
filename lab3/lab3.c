@@ -1,36 +1,48 @@
 #define _CRT_SECURE_NO_WARNINGS
-#define D 2.54
+#define D_ENG 2.54
+#define D_ESP 2.32166
+#define D_LIT 2.7076
 #include <stdio.h>
 #include <locale.h> 
 
 //лаб3
 
-int main()
-{
-    setlocale(LC_CTYPE, "RUS");
-    zadanie1();
-    zadanie2();
-    zadanie3();
-}
 
 int zadanie1()
 {
     int num;
-    printf("1) введите число: ");
+    int num2;
+
+    puts("1) введите число");
     scanf("%d", &num);
-    printf("Выведено число %d\n", num);
-    return 0;
+    printf("введено число %d\n", num);
+
+    puts("введите второе число");
+    scanf("%d", &num2);
+    printf("введено число %d\n", num2);
+
+    printf("сумма:        %d + %d = %d\n", num2, num, num2 + num);
+    printf("разность:     %d - %d = %d\n", num2, num, num2 - num);
+    printf("произведение: %d * %d = %d\n", num2, num, num2 * num);
+    printf("частное:      %d / %d = %.2f\n", num2, num, num2 / (num * 1.0));
+    printf("остаток:      %d %% %d = %d\n", num2, num, num2 % num);
 }
 
 int zadanie2()
 {
     int dym;
-    float result;
-    printf("2) введите число: ");
+    float result_eng, result_esp, result_lit;
+
+    puts("2)введите число дюймов");
     scanf("%d", &dym);
-    result = D * dym;
-    printf("%d дюймов – это %.1f см\n", dym, result);
-    return 0;
+
+    result_eng = D_ENG * dym;
+    result_esp = D_ESP * dym;
+    result_lit = D_LIT * dym;
+
+    printf("%d английских дюймов    – это %.2f см\n", dym, result_eng);
+    printf("%d испанских pulgada     – это %.2f см\n", dym, result_esp);
+    printf("%d старолитовских дюймов – это %.2f см\n", dym, result_lit);
 }
 
 int zadanie3()
@@ -48,4 +60,11 @@ int zadanie3()
     puts("----------------------");
     printf("|%6.0lf|%6.0lf|%6.0lf|\n", a * b, a + b, a - b);
     puts("----------------------");
+}
+int main()
+{
+    setlocale(LC_CTYPE, ".UTF-8");
+    zadanie1();
+    zadanie2();
+    zadanie3();
 }
