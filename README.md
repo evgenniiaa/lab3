@@ -8,9 +8,7 @@
 #include <stdio.h>
 #include <locale.h>
 
-int main() {
-    setlocale(LC_CTYPE, "RUS");
-
+zadanie1() {
     double mj;    // мегаджоули
     double kcal;  // килокалории
     double kwh;   // киловатт·часы
@@ -23,7 +21,10 @@ int main() {
 
     printf("%.3lf МДж = %.3lf ккал\n", mj, kcal);
     printf("%.3lf МДж = %.3lf кВт·ч\n", mj, kwh);
-
+}
+int main() {
+    setlocale(LC_CTYPE, ".UTF-8");
+    zadanie1();
     return 0;
 }
 ```
